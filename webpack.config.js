@@ -1,9 +1,18 @@
 module.exports = {
   entry: {
-    app: './app/components/HelloWorld/index'
+    app: './app/index'
   },
   output: {
     filename: '[name].js'
+  },
+  module: {
+    loaders: [{
+      test: /\.html$/,
+      loaders: ['vue-html-loader']
+    }, {
+      test: /\.css$/,
+      loader: "style!css"
+    }]
   },
   resolve: {
     alias: {

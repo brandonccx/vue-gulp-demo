@@ -1,8 +1,10 @@
-var Vue = require('vue');
+require('./style.css');
 
-new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue.js!'
+module.exports = {
+  template: require('./template.html'),
+  data: function () {
+    return {
+      message: 'Hello vue.js!'
+    };
   }
-});
+};
